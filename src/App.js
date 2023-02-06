@@ -1,12 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 import Navbar  from './components/Navbar';
+import Signup from './components/Signup';
+import Login from './components/Login';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <h1>Welcome to virtual mall</h1>
+      <Router>
+          <Navbar />
+          <div className="container">
+            <Routes>
+              <Route exact path="/login" element={<Login/>} />
+              <Route exact path="/signup" element={<Signup/>} />
+            </Routes>
+          </div>
+        </Router>
     </div>
   );
 }
