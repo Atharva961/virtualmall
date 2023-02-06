@@ -15,6 +15,7 @@ function App() {
       <Router>
           <Navbar />
           <div className="container">
+            Welcome to Virtual Mall
             <Routes>
               <Route exact path="/login" element={<Login/>} />
               <Route exact path="/signup" element={<Signup/>} />
