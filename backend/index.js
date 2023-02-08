@@ -15,6 +15,7 @@ app.use(express.json());
 
 //Available routes
 app.use('/apis/auth', require('./routes/auth'))
+app.use('/apis/product', require('./routes/product'))
 
 app.listen(port, () => {
   console.log(`virtualmall backend listening at http://localhost:${port}`)
